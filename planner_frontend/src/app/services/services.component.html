@@ -1,0 +1,31 @@
+
+  <h1 class="mat-h1" align="center">Services</h1>
+  <p align="center">Choose a service and start scheduling.</p>
+  <div class="services">
+    <mat-card class="example-card" *ngFor="let service of servicesList" class="mat-elevation-z5">
+      <mat-card-content>
+        <div class="inline-title-edit">
+          <mat-card-title>{{service.title}}</mat-card-title>
+          <button mat-button color="secondary"
+                  class="edit-button" routerLink="/">
+            <i class="material-icons">edit</i>
+          </button>
+        </div>
+        <mat-card-subtitle>{{service.description}}</mat-card-subtitle>
+        Default long description
+        <p>
+          {{service.long_description}}
+        </p>
+        <button mat-raised-button color="accent">Start Service</button>
+        <button mat-button color="warn" *ngIf="isAdmin()"
+                (click)="delete(service.id)">
+          Delete
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <button mat-fab color="primary" *ngIf="authenticated"
+          class="new-service" routerLink="/new-service">
+    <i class="material-icons">note_add</i>
+  </button>
+

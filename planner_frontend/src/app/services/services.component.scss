@@ -1,0 +1,27 @@
+div.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+button.new-service {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media (max-width: 720px) {
+  div.services {
+    grid-template-columns: 1fr;
+  }
+}
+
+button.edit-button {
+  justify-content: flex-end;
+}
+
+.inline-title-edit {
+  /* needed styles below */
+  display: flex;
+  justify-content: space-between;
+}

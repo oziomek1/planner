@@ -1,0 +1,23 @@
+<div>
+  <h2>New Service</h2>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Title"
+           (keyup)="updateTitle($event)">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Description"
+           (keyup)="updateDescription($event)">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="LongDescription"
+           (keyup)="updateLongDescription($event)">
+  </mat-form-field>
+
+  <button mat-raised-button
+          color="primary"
+          (click)="saveService()">
+    Save Service
+  </button>
+</div>
